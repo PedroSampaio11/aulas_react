@@ -1,6 +1,7 @@
 /** @format */
-
+// componente
 const RenderFunction = () => {
+  // funçao
   const renderTest = (x ) => {
     if (x < 5) {
       return <p>Rendered</p>;
@@ -8,6 +9,7 @@ const RenderFunction = () => {
       return <p>Not Rendered</p>;
     }
   };
+  // resposta da funçao
   return (
     <>
       {renderTest(10)}
