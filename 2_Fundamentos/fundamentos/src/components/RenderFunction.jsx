@@ -1,18 +1,19 @@
+/** @format */
 
 const RenderFunction = () => {
-  const renderTest = (x) =>{
-    if(x){
-      return <h5>Renderizando isso</h5>
-    }else{
-      return <h5>Renderizando isso também</h5>
+  const renderTest = (x) => {
+    if (x) {
+      return <p>Rendered</p>;
+    } else {
+      return <p>Not Rendered</p>;
     }
-  }
+  };
   return (
     <>
       {renderTest(true)}
       {renderTest(false)}
     </>
-  )
-}
+  );
+};
 
-export default RenderFunction
+export default RenderFunction;
