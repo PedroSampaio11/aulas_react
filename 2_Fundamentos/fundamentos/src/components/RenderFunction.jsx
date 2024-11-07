@@ -1,8 +1,8 @@
 /** @format */
 
 const RenderFunction = () => {
-  const renderTest = (x) => {
-    if (x) {
+  const renderTest = (x ) => {
+    if (x < 5) {
       return <p>Rendered</p>;
     } else {
       return <p>Not Rendered</p>;
@@ -10,8 +10,8 @@ const RenderFunction = () => {
   };
   return (
     <>
-      {renderTest(true)}
-      {renderTest(false)}
+      {renderTest(10)}
+      {renderTest(2)}
     </>
   );
 };
