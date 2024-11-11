@@ -13,10 +13,10 @@ const Teste = () => {
         tipo da imagem: <span>{oriental.type}</span>
       </h2>
       <h2 className="test">
-        tipo da imagem: <span>{oriental.origin}</span>
+        origem da imagem: <span>{oriental.origin}</span>
       </h2>
       <h2 className="test">
-        tipo da imagem: <span>{oriental.wit}</span>
+        significado: <span>{oriental.wit}</span>
       </h2>
     </>
   );
