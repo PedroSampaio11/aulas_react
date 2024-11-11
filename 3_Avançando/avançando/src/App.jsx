@@ -1,10 +1,12 @@
 import './App.css'
+import Teste from './components/Teste'
 //  importando imagem
 import img2 from "./assets/img2.png"
 function App() {
 
   return (
     <div className='App'>
+      <Teste/>
       <h1> teste </h1>
       {/* Imagem em public */}
       <h2> Imagem em public</h2>
