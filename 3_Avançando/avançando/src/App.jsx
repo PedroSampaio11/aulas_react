@@ -19,7 +19,6 @@ function App() {
       <img src={img2} alt="" />
       <br />
       <br />
-      <br />
 
       <div className="hook" style={{ border: "1.5px solid", borderRadius: "8px" }}>
         <h1>hooks</h1>
