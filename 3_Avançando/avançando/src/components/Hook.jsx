@@ -22,7 +22,7 @@ const Hook = () => {
         <p>valor atual com hook : {number}</p>
         <button
           onClick={() => {
-            setNumber(number + 10);
+            setNumber(number + 1);
           }}
         >
           SOMAR
