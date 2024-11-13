@@ -12,7 +12,7 @@ const ListRender = () => {
 
   // funçao simples so para mostrar o uso da renderização com useState ( desconsiderar )
   const addName = () => {
-    const newUser = {id:5, name: "turtle" }
+    const newUser = {id:5, name: "turtle"}
     setUser((prevUsers) => [...prevUsers, newUser]);
   };
   return (
