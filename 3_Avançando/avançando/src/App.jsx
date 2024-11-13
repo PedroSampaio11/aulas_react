@@ -6,6 +6,9 @@ import Teste from "./components/Teste";
 import img2 from "./assets/img2.png";
 // importando hook
 import Hook from "./components/Hook";
+// importando list
+import ListRender from "./components/ListRender";
+
 function App() {
   return (
     <div className="App" style={{ paddingBottom: "500px" }}>
@@ -20,9 +23,28 @@ function App() {
       <br />
       <br />
 
-      <div className="hook" style={{ border: "1.5px solid", borderRadius: "8px" }}>
+      <div
+        className="hook"
+        style={{ border: "1.5px solid", borderRadius: "8px" }}
+      >
         <h1>hooks</h1>
         <Hook />
+      </div>
+      <br />
+      <br />
+      <div
+        className="list"
+        style={{
+          border: "1.5px solid #888",
+          borderRadius: "8px",
+          padding: "10px",
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}>
+          Lista de Users <br />
+          (Render List)
+        </h1>
+        <ListRender />
       </div>
     </div>
   );
