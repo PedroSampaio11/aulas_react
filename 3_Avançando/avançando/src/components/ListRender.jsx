@@ -4,34 +4,36 @@ import { useState } from "react";
 
 const ListRender = () => {
   const [users, setUser] = useState([
-    { id: 1, name: "Pedro", age: 22 },
-    { id: 2, name: "Thais", age: 21 },
-    { id: 3, name: "Maya", age: 1.5 },
-    { id: 4, name: "Tolia-Tolia", age: 5 },
+    { id: 1, name: "Pedro" },
+    { id: 2, name: "Thais" },
+    { id: 3, name: "Maya" },
+    { id: 4, name: "Tolia-Tolia"},
   ]);
 
-  const addName = ()=>{
-    setUser(...users, "NovoNome")
-  }
+  // funçao simples so para mostrar o uso da renderização com useState ( desconsiderar )
+  const addName = () => {
+    const newUser = {id:5, name: "turtle" }
+    setUser((prevUsers) => [...prevUsers, newUser]);
+  };
   return (
     <div>
-      {/* <h1>Lista de Nomes</h1>
-      {/* sem key  */}
-      {/* <ul>
-        {persons.map((person) => (
-          <li>{person}</li>
-        ))}
-      </ul> */}
-
       {/* com key */}
       <ul>
         {/* alguns detalhes de estilo sem css */}
         {users.map((user) => (
-          <li key={user.id} style={{textAlign: "left", fontWeight: "bold"}}>
-           Nome: <span style={{fontWeight:"normal"}}>{user.name}</span>
+          <li key={user.id} style={{ textAlign: "left", fontWeight: "bold" }}>
+            Nome: <span style={{ fontWeight: "normal" }}>{user.name}</span>
           </li>
         ))}
       </ul>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          addName();
+        }}
+      >
+        Add Nome
+      </button>
     </div>
   );
 };
