@@ -6,6 +6,7 @@ import Teste from "./components/Teste";
 import img2 from "./assets/img2.png";
 // importando hook
 import Hook from "./components/Hook";
+import HookTest from "./components/HookTest";
 function App() {
   return (
     <div className="App" style={{ paddingBottom: "500px" }}>
@@ -24,6 +25,9 @@ function App() {
         <h1>hooks</h1>
         <Hook />
       </div>
+
+
+      <HookTest/>
     </div>
   );
 }
