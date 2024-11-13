@@ -25,7 +25,7 @@ function App() {
 
       <div
         className="hook"
-        style={{ border: "1.5px solid", borderRadius: "8px" }}
+        style={{ border: "1.5px solid", borderRadius: "8px", padding: "10px"}}
       >
         <h1>hooks</h1>
         <Hook />
