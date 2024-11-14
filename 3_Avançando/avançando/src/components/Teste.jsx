@@ -1,5 +1,3 @@
-/** @format */
-
 const Teste = () => {
   const oriental = {
     type: "oriental",
