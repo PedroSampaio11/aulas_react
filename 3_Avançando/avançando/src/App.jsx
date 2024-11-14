@@ -8,7 +8,6 @@ import img2 from "./assets/img2.png";
 import Hook from "./components/Hook";
 // importando list
 import ListRender from "./components/ListRender";
-import TestRender from "./components/TestRender";
 
 function App() {
   return (
@@ -47,8 +46,6 @@ function App() {
         </h1>
         <ListRender />
       </div>
-
-      <TestRender/>
     </div>
   );
 }
