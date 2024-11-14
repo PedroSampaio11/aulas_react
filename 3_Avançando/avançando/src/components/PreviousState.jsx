@@ -16,7 +16,7 @@ const PreviousState = () => {
     const randomId = Math.floor(Math.random() * 6);
     setPersons((prevPersons) =>
       prevPersons.filter((person) => person.id !== randomId)
-    ); // Corrigido
+    );
   };
 
   return (

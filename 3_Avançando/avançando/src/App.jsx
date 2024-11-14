@@ -10,6 +10,8 @@ import Hook from "./components/Hook";
 import ListRender from "./components/ListRender";
 // importando previous state
 import PreviousState from "./components/PreviousState";
+//  importando renderizaçao condicional
+import ConditionalRender from "./components/ConditionalRender";
 
 function App() {
   return (
@@ -59,6 +61,18 @@ function App() {
       >
         <h1 style={{ textAlign: "center" }}>Previous State</h1>
         <PreviousState />
+      </div>
+      <div
+        className="list"
+        style={{
+          border: "1.5px solid #888",
+          borderRadius: "8px",
+          padding: "10px",
+          margin: "15px 0"
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}>Renderização Condicional</h1>
+        <ConditionalRender/>
       </div>
     </div>
   );
