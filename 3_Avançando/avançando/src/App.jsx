@@ -8,6 +8,8 @@ import img2 from "./assets/img2.png";
 import Hook from "./components/Hook";
 // importando list
 import ListRender from "./components/ListRender";
+// importando previous state
+import PreviousState from "./components/PreviousState";
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
 
       <div
         className="hook"
-        style={{ border: "1.5px solid", borderRadius: "8px", padding: "10px"}}
+        style={{ border: "1.5px solid", borderRadius: "8px", padding: "10px" }}
       >
         <h1>hooks</h1>
         <Hook />
@@ -45,6 +47,18 @@ function App() {
           (Render List)
         </h1>
         <ListRender />
+      </div>
+      <div
+        className="list"
+        style={{
+          border: "1.5px solid #888",
+          borderRadius: "8px",
+          padding: "10px",
+          margin: "15px 0"
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}>Previous State</h1>
+        <PreviousState />
       </div>
     </div>
   );
