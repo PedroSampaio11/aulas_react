@@ -12,6 +12,10 @@ import ListRender from "./components/ListRender";
 import PreviousState from "./components/PreviousState";
 //  importando renderizaçao condicional
 import ConditionalRender from "./components/ConditionalRender";
+// importando Props
+import Props from "./components/Props";
+// importando Destructuring Props
+import Destructuring from "./components/Destructuring";
 
 function App() {
   return (
@@ -56,7 +60,7 @@ function App() {
           border: "1.5px solid #888",
           borderRadius: "8px",
           padding: "10px",
-          margin: "15px 0"
+          margin: "15px 0",
         }}
       >
         <h1 style={{ textAlign: "center" }}>Previous State</h1>
@@ -68,11 +72,27 @@ function App() {
           border: "1.5px solid #888",
           borderRadius: "8px",
           padding: "10px",
-          margin: "15px 0"
+          margin: "15px 0",
         }}
       >
         <h1 style={{ textAlign: "center" }}>Renderização Condicional</h1>
-        <ConditionalRender/>
+        <ConditionalRender />
+      </div>
+
+      <div
+        className="list"
+        style={{
+          border: "1.5px solid #888",
+          borderRadius: "8px",
+          padding: "10px",
+          margin: "15px 0",
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}> Props </h1>
+        <Props user="Pedro" />
+        <br style={{border: "1px solid #333"}}/>
+        <h1 style={{ textAlign: "center" }}> Desestruturação</h1>
+        <Destructuring brand="Mercedes" motor= "v8"/>
       </div>
     </div>
   );
