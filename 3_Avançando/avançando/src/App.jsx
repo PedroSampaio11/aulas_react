@@ -92,7 +92,7 @@ function App() {
         <Props user="Pedro" />
         <br style={{border: "1px solid #333"}}/>
         <h1 style={{ textAlign: "center" }}> Desestruturação</h1>
-        <Destructuring brand="Mercedes" motor= "v8"/>
+        <Destructuring brand="Mercedes" model= "A250"/>
       </div>
     </div>
   );
