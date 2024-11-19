@@ -17,6 +17,15 @@ import Props from "./components/Props";
 // importando Destructuring Props
 import Destructuring from "./components/Destructuring";
 
+// renderizaçao de lista de carros
+const cars = [
+  { id: 1, brand: "Audi", year: 2020 },
+  { id: 2, brand: "Fiat", year: 2019 },
+  { id: 3, brand: "Chevrolet", year: 2018 },
+  { id: 3, brand: "Volkswagen", year: 2018 },
+];
+
+
 function App() {
   return (
     <div className="App" style={{ paddingBottom: "500px" }}>
@@ -90,10 +99,42 @@ function App() {
       >
         <h1 style={{ textAlign: "center" }}> Props </h1>
         <Props user="Pedro" />
-        <br style={{border: "1px solid #333"}}/>
         <h1 style={{ textAlign: "center" }}> Desestruturação</h1>
-        <Destructuring brand="Mercedes" model= "A250"/>
+        <Destructuring brand="Mercedes" model="A250" km={120.0} />
       </div>
+      <br />
+      <div
+        className="props"
+        style={{
+          border: "1.5px solid #888",
+          borderRadius: "8px",
+          padding: "10px",
+          margin: "15px 0",
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}> Props </h1>
+        <h1 style={{ textAlign: "center" }}> Reutilização de Componentes </h1>
+        <Destructuring brand="Mercedes" year={2025} />
+        <Destructuring brand="BMW" year={2020} />
+        <Destructuring brand="Vw" year={2024} />
+      </div>
+      <br />
+      <div
+        className="props"
+        style={{
+          border: "1.5px solid #888",
+          borderRadius: "8px",
+          padding: "10px",
+          margin: "15px 0",
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}> Props </h1>
+        <h1 style={{ textAlign: "center" }}> Reutilização com Loop </h1>
+        { cars.map((car)=>(
+          <Destructuring key={car.id} brand={car.brand} year={car.year} />
+        ))}
+      </div>
+
     </div>
   );
 }

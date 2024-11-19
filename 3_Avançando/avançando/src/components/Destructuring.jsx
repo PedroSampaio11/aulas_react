@@ -1,11 +1,10 @@
 
 import PropTypes from "prop-types";
 
-const Destructuring = ({brand, model}) => {
+const Destructuring = ({brand, year}) => {
   return (
     <div>
-      <p>Essa é uma {brand}</p>
-      <p>Modelo {model}</p>
+      <p>Esse é um {brand}, ano {year}</p> 
     </div>
   );
 };
@@ -13,7 +12,7 @@ const Destructuring = ({brand, model}) => {
 // Definindo PropTypes para o componente
 Destructuring.propTypes = {
   brand: PropTypes.string.isRequired, // Valida que 'brand' deve ser uma string e é obrigatória
-  model: PropTypes.string.isRequired, 
+  year: PropTypes.number.isRequired, 
 };
 
 export default Destructuring;
