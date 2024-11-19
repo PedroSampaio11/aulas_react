@@ -25,7 +25,6 @@ const cars = [
   { id: 3, brand: "Volkswagen", year: 2018 },
 ];
 
-
 function App() {
   return (
     <div className="App" style={{ paddingBottom: "500px" }}>
@@ -130,11 +129,10 @@ function App() {
       >
         <h1 style={{ textAlign: "center" }}> Props </h1>
         <h1 style={{ textAlign: "center" }}> Reutilização com Loop </h1>
-        { cars.map((car)=>(
+        {cars.map((car) => (
           <Destructuring key={car.id} brand={car.brand} year={car.year} />
         ))}
       </div>
-
     </div>
   );
 }
