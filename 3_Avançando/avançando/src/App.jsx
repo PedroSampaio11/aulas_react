@@ -18,6 +18,9 @@ import Props from "./components/Props";
 import Destructuring from "./components/Destructuring";
 // importando children
 import Container from "./components/Children";
+// importando funçao em props
+import FunctionProps from "./components/FunctionProps";
+function showMessage(){ console.log('FOI')}
 
 // renderizaçao de lista de carros
 const cars = [
@@ -148,6 +151,19 @@ function App() {
         <Container>
           <p>usando children</p>
         </Container>
+      </div>
+      <div
+        className="props"
+        style={{
+          border: "1.5px solid #888",
+          borderRadius: "8px",
+          padding: "10px",
+          margin: "15px 0",
+        }}
+      >
+
+        <h1 style={{ textAlign: "center" }}> Function props</h1>
+        <FunctionProps myFunction={showMessage}/>
       </div>
     </div>
   );
