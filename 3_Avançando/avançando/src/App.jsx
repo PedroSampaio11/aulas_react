@@ -16,6 +16,8 @@ import ConditionalRender from "./components/ConditionalRender";
 import Props from "./components/Props";
 // importando Destructuring Props
 import Destructuring from "./components/Destructuring";
+// importando children
+import Container from "./components/Children";
 
 // renderizaçao de lista de carros
 const cars = [
@@ -132,6 +134,20 @@ function App() {
         {cars.map((car) => (
           <Destructuring key={car.id} brand={car.brand} year={car.year} />
         ))}
+      </div>
+      <div
+        className="props"
+        style={{
+          border: "1.5px solid #888",
+          borderRadius: "8px",
+          padding: "10px",
+          margin: "15px 0",
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}> Children </h1>
+        <Container>
+          <p>usando children</p>
+        </Container>
       </div>
     </div>
   );
