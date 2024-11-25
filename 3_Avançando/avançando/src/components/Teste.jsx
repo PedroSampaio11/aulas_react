@@ -4,7 +4,6 @@ const Teste = () => {
     origin: "japan",
     wit: "fundos de elementos",
   };
-
   return (
     <>
       <h2 className="test">
@@ -19,5 +18,4 @@ const Teste = () => {
     </>
   );
 };
-
 export default Teste;
