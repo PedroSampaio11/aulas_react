@@ -15,6 +15,8 @@ const Teste = () => {
       <h2 className="test">
         significado: <span>{oriental.wit}</span>
       </h2>
+
+      
     </>
   );
 };

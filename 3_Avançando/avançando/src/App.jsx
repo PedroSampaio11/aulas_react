@@ -1,6 +1,7 @@
 /** @format */
 
 import "./App.css";
+import Counter from "./components/Counter";
 import Teste from "./components/Teste";
 //  importando imagem
 import img2 from "./assets/img2.png";
@@ -20,7 +21,9 @@ import Destructuring from "./components/Destructuring";
 import Container from "./components/Children";
 // importando funçao em props
 import FunctionProps from "./components/FunctionProps";
-function showMessage(){ console.log('FOI')}
+function showMessage() {
+  console.log("FOI");
+}
 
 // renderizaçao de lista de carros
 const cars = [
@@ -161,9 +164,12 @@ function App() {
           margin: "15px 0",
         }}
       >
-
         <h1 style={{ textAlign: "center" }}> Function props</h1>
-        <FunctionProps myFunction={showMessage}/>
+        <FunctionProps myFunction={showMessage} />
+      </div>
+      <div>
+        <h2>Função Counter</h2> 
+        <Counter /> 
       </div>
     </div>
   );
