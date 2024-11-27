@@ -1,7 +1,6 @@
 /** @format */
 
 import "./App.css";
-import Counter from "./components/Counter";
 import Teste from "./components/Teste";
 //  importando imagem
 import img2 from "./assets/img2.png";
@@ -21,19 +20,29 @@ import Destructuring from "./components/Destructuring";
 import Container from "./components/Children";
 // importando funçao em props
 import FunctionProps from "./components/FunctionProps";
-function showMessage() {
-  console.log("FOI");
-}
+import { useState } from "react";
 
-// renderizaçao de lista de carros
-const cars = [
-  { id: 1, brand: "Audi", year: 2020 },
-  { id: 2, brand: "Fiat", year: 2019 },
-  { id: 3, brand: "Chevrolet", year: 2018 },
-  { id: 3, brand: "Volkswagen", year: 2018 },
-];
+// state lift
+import Message from "./components/Message";
+import MudarMessage from "./components/MudarMessage";
 
-function App() {
+function App() {// renderizaçao de lista de carros
+  const cars = [
+    { id: 1, brand: "Audi", year: 2020 },
+    { id: 2, brand: "Fiat", year: 2019 },
+    { id: 3, brand: "Chevrolet", year: 2018 },
+    { id: 4, brand: "Volkswagen", year: 2018 },
+  ];
+  //  -------   //  
+  function showMessage() {
+    console.log("FOI");
+  }
+  //  -------   //  
+  const [message, setMessage] = useState("");
+  const alterarMessage = (msg) => {
+    setMessage(msg);
+  };
+  //  -------   //  
   return (
     <div className="App" style={{ paddingBottom: "500px" }}>
       <Teste />
@@ -167,9 +176,10 @@ function App() {
         <h1 style={{ textAlign: "center" }}> Function props</h1>
         <FunctionProps myFunction={showMessage} />
       </div>
-      <div>
-        <h2>Função Counter</h2> 
-        <Counter /> 
+      <div style={{ border: "1.5px solid #888" }}>
+        <h1> state lift</h1>
+        <Message msg={message} />{/* Passa a mensagem correta para o componente Message */}
+        <MudarMessage alterarMessage={alterarMessage} />{/* Passa a função para MudarMessage */} 
       </div>
     </div>
   );
