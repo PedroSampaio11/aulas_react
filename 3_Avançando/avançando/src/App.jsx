@@ -26,23 +26,33 @@ import { useState } from "react";
 import Message from "./components/Message";
 import MudarMessage from "./components/MudarMessage";
 
-function App() {// renderizaçao de lista de carros
+//  teste state
+import SaboresPizza from "./components/SaboresPizza";
+import Pizza from "./components/Pizza";
+
+function App() {
+  // renderizaçao de lista de carros
   const cars = [
     { id: 1, brand: "Audi", year: 2020 },
     { id: 2, brand: "Fiat", year: 2019 },
     { id: 3, brand: "Chevrolet", year: 2018 },
     { id: 4, brand: "Volkswagen", year: 2018 },
   ];
-  //  -------   //  
-  function showMessage(){
+  //  -------   //
+  function showMessage() {
     alert("Mensagem enviada com sucesso!");
   }
-  //  -------   //  
+  //  -------   //
   const [message, setMessage] = useState("");
   const alterarMessage = (msg) => {
     setMessage(msg);
   };
-  //  -------   //  
+  //  -------   //
+  const [pizza, setPizza] = useState("");
+  const alterarPizza = (pizza) => {
+    setPizza(pizza);
+  };
+
   return (
     <div className="App" style={{ paddingBottom: "500px" }}>
       <Teste />
@@ -175,12 +185,22 @@ function App() {// renderizaçao de lista de carros
         }}
       >
         <h1 style={{ textAlign: "center" }}> Function props</h1>
-        <FunctionProps myFunction={showMessage}/>
+        <FunctionProps myFunction={showMessage} />
       </div>
       <div style={{ border: "1.5px solid #888" }}>
         <h1> state lift</h1>
-        <Message msg={message} />{/* Passa a mensagem correta para o componente Message */}
-        <MudarMessage alterarMessage={alterarMessage} />{/* Passa a função para MudarMessage */} 
+        <Message msg={message} />
+        {/* Passa a mensagem correta para o componente Message */}
+        <MudarMessage alterarMessage={alterarMessage} />
+        {/* Passa a função para MudarMessage */}
+      </div>
+
+      <div>
+        <h1>teste</h1>
+        {/*  primeiro pizza (antes do =) é o nome da prop */}
+        {/* O segundo pizza (depois do =) é o valor do estado que o pai tem guardado */}
+        <Pizza pizza={pizza} />
+        <SaboresPizza alterarPizza={alterarPizza} />
       </div>
     </div>
   );
