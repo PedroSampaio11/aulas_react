@@ -34,8 +34,8 @@ function App() {// renderizaçao de lista de carros
     { id: 4, brand: "Volkswagen", year: 2018 },
   ];
   //  -------   //  
-  function showMessage() {
-    alert("Obrigado");
+  function showMessage(){
+    alert("Mensagem enviada com sucesso!");
   }
   //  -------   //  
   const [message, setMessage] = useState("");
@@ -164,6 +164,7 @@ function App() {// renderizaçao de lista de carros
           <p>usando o children</p>
         </Container>
       </div>
+      {/* componnete pai */}
       <div
         className="props"
         style={{
@@ -174,7 +175,7 @@ function App() {// renderizaçao de lista de carros
         }}
       >
         <h1 style={{ textAlign: "center" }}> Function props</h1>
-        <FunctionProps myFunction={showMessage} />
+        <FunctionProps myFunction={showMessage}/>
       </div>
       <div style={{ border: "1.5px solid #888" }}>
         <h1> state lift</h1>

@@ -1,8 +1,11 @@
+import React from 'react'
+// componente filho
 const FunctionProps = ({myFunction}) => {
   return (
-    <>
-      <button onClick={myFunction}>Click me!</button>
-    </>
+    <div>
+      <button onClick={myFunction}> Clique aqui</button>
+    </div>
   )
 }
+
 export default FunctionProps
