@@ -1,17 +1,12 @@
-import PropTypes from "prop-types";
-const Container = ({children, childreen}) => {
+import React from 'react'
+
+const Container = ({children}) => {
   return (
     <>
-      <h2>Conteudo do componente pai: </h2>
+      <h2>conteudo do componente pai:</h2>
       {children}
-      <h2>outro</h2>
-      {childreen}
     </>
   )
 }
 
-Container.propTypes = {
-  children: PropTypes.string.isRequired,
-  childreen: PropTypes.string.isRequired,
-};
-export default Container
+export default Container;

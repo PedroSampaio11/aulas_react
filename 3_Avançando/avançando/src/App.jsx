@@ -35,7 +35,7 @@ function App() {// renderizaçao de lista de carros
   ];
   //  -------   //  
   function showMessage() {
-    console.log("FOI");
+    alert("Obrigado");
   }
   //  -------   //  
   const [message, setMessage] = useState("");
@@ -161,7 +161,7 @@ function App() {// renderizaçao de lista de carros
       >
         <h1 style={{ textAlign: "center" }}> Children </h1>
         <Container>
-          <p>usando children</p>
+          <p>usando o children</p>
         </Container>
       </div>
       <div
